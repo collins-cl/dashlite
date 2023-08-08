@@ -1,0 +1,385 @@
+@import "../../Scss/colors.scss";
+
+.navbar {
+  position: sticky;
+  min-height: 55px;
+  top: 0;
+  background-color: white;
+  border-bottom: 2px solid rgba(109, 109, 109, 0.093);
+  width: 100%;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+
+    .mobile-view-logo {
+      display: none;
+    }
+
+    .right-widget {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 10px;
+      align-items: center;
+
+      .search-bar-nav {
+        width: 70%;
+        position: relative;
+
+        input {
+          width: 100%;
+          padding: 10px 3em;
+          outline: none;
+          border: none;
+
+          &::placeholder {
+            font-size: 13px;
+          }
+        }
+
+        .icon {
+          font-size: 0.95rem;
+          font-weight: lighter;
+          color: gray;
+          position: absolute;
+          top: 0;
+          margin-top: 11px;
+          margin-left: 5px;
+        }
+      }
+
+      .aside {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+      }
+
+      .widgets {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+
+        .countries {
+          position: relative;
+        }
+
+        .notifications {
+          position: relative;
+
+          .notification {
+            position: relative;
+
+            div {
+              position: absolute;
+              top: 0;
+              margin-top: 8px;
+              right: 0;
+              margin-right: 8px;
+              height: 6px;
+              width: 6px;
+              border-radius: 50%;
+              background-color: rgb(98, 98, 220);
+            }
+          }
+
+          .notif {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 3.3em;
+            background-color: white;
+            width: 350px;
+            height: 380px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            .notif-head {
+              height: 10%;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 1.5rem 1.7rem;
+              font-size: 13px;
+              border-bottom: 1px solid rgba(97, 95, 95, 0.19);
+            }
+
+            .content {
+              height: 75%;
+              position: relative;
+
+              .content-info {
+                overflow-y: scroll;
+                height: 100%;
+
+                .request,
+                .deposit {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 1em;
+                  padding: 1.2em 1.5em;
+                  border-bottom: 1px solid rgba(63, 63, 63, 0.104);
+
+                  .icon {
+                    color: orange;
+                    background-color: rgba(247, 192, 90, 0.52);
+                    height: 35px;
+                    width: 35px;
+                    padding: 7px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                  div {
+                    .cont {
+                      font-size: 13px;
+                    }
+
+                    .time {
+                      font-size: 12px;
+                    }
+                  }
+                }
+
+                .deposit {
+                  .icon {
+                    color: rgb(88, 206, 88);
+                    background-color: rgba(39, 203, 39, 0.323);
+                    height: 35px;
+                    width: 35px;
+                    padding: 7px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                }
+              }
+            }
+
+            .footer {
+              height: 15%;
+              text-align: center;
+              padding: 10px;
+            }
+          }
+        }
+      }
+
+      .profile {
+        width: 60%;
+        position: relative;
+
+        .cont {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          cursor: pointer;
+
+          .profile-summary {
+            width: 100%;
+            div {
+              font-size: 12px;
+            }
+
+            p {
+              font-size: 13px;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            }
+          }
+        }
+
+        .profile-content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin-top: 3.2em;
+          margin-left: -5em;
+          background-color: white;
+          width: 250px;
+          height: 260px;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+          .contain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5em;
+            gap: 0.7em;
+            background-color: rgba(166, 166, 183, 0.207);
+
+            .profile-summary {
+              div {
+                font-size: 15px;
+              }
+
+              p {
+                font-size: 11px;
+              }
+            }
+          }
+
+          .middle-sect {
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 auto;
+
+            div {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              cursor: pointer;
+              color: rgba(39, 72, 91, 0.923);
+              font-size: 13px;
+
+              .icon {
+                font-size: 18px;
+              }
+
+              &:hover {
+                color: rgba(82, 122, 146, 0.923);
+              }
+            }
+          }
+
+          .logout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em 0;
+            gap: 10px;
+            font-size: 13px;
+            cursor: pointer;
+            color: rgba(39, 72, 91, 0.923);
+            border-top: 2px solid rgba(181, 173, 173, 0.185);
+
+            &:hover {
+              color: rgba(82, 122, 146, 0.923);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    position: fixed;
+    min-height: 55px;
+    top: 0;
+    background-color: white;
+    border-bottom: 2px solid rgba(109, 109, 109, 0.093);
+    width: 100%;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 5px;
+
+      .mobile-view-logo {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .icon{
+            font-size: 1.8em;
+        }
+
+      }
+
+      .right-widget {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        gap: 10px;
+        align-items: center;
+
+        .search-bar-nav {
+          display: none;
+        }
+
+        .aside {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 100%;
+          padding: 5px;
+        }
+
+        .widgets {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: fit-content;
+
+          .countries {
+            display: none;
+          }
+
+          .notifications {
+            position: relative;
+
+            .notification {
+              position: relative;
+            }
+
+            .notif {
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translate(10%);
+              margin-top: 3.3em;
+            }
+          }
+        }
+
+        .profile {
+          width: 20%;
+          position: relative;
+
+          .cont {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+
+            .profile-summary {
+              display: none;
+              width: 100%;
+            }
+          }
+
+          .profile-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 3.2em;
+            transform: translate(-70%);
+          }
+        }
+      }
+    }
+  }
+}

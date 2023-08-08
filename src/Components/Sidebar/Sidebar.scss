@@ -1,0 +1,319 @@
+@import "../../Scss/colors.scss";
+
+.sidebar,
+.sidebar-open {
+  width: 270px;
+  height: 100vh;
+  padding: 15px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+  border-right: 2px solid rgba(98, 95, 95, 0.119);
+
+  .sidebar-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      img {
+        width: 28px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+        span {
+          color: rgba(121, 121, 198, 0.827);
+        }
+      }
+    }
+
+    .hamburger {
+      font-size: 1.6rem;
+
+      .MuiIconButton-root {
+        padding: 7px;
+        &:hover {
+          background-color: rgba(142, 142, 184, 0.383);
+          transition: 0.5s background-color ease-in;
+        }
+      }
+    }
+  }
+
+  .sidebar-li {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    overflow-y: scroll;
+    bottom: 0;
+    height: 90%;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      border-radius: 20px;
+      background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(165, 164, 164, 0.374);
+    }
+
+    .sidebar-rel {
+      height: 100%;
+    }
+
+    li {
+      margin-bottom: 0.6em;
+      &:hover {
+        background-color: rgba(131, 131, 139, 0.171);
+        border-radius: 7px;
+        transition: 0.3s background-color;
+      }
+      &:hover a p,
+      &:hover .icons {
+        color: $dashFontHoverColor;
+        transition: 0.3s color;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.8em;
+        padding: 10px;
+
+        .icons {
+          font-size: 1.2rem;
+          color: $iconColor;
+        }
+
+        p {
+          color: $dashboardFontColor;
+          font-weight: bold;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .accordion {
+      box-shadow: none;
+      padding: 0;
+
+      #accordion-summary {
+        padding: 0 10px;
+
+        &:hover {
+          background-color: rgba(131, 131, 139, 0.171);
+          border-radius: 7px;
+          transition: 0.3s background-color;
+        }
+
+        .MuiAccordionSummary-content {
+          display: flex;
+          align-items: center;
+          gap: 0.8em;
+          padding: 0;
+
+          .icons {
+            font-size: 1.2rem;
+            color: $iconColor;
+          }
+
+          p {
+            color: $dashboardFontColor;
+            font-weight: bold;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .accordion-details {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.89rem;
+        line-height: 1;
+        padding-left: 2.5em;
+        font-size: 0.85rem;
+
+        & a:hover {
+          color: $dashFontHoverColor;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @import "../../Scss/colors.scss";
+
+.sidebar,
+.sidebar-open {
+
+  width: 270px;
+  height: 100vh;
+  padding: 15px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+  border-right: 2px solid rgba(98, 95, 95, 0.119);
+  display: none;
+
+  .sidebar-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      img {
+        width: 28px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+        span {
+          color: rgba(121, 121, 198, 0.827);
+        }
+      }
+    }
+
+    .hamburger {
+      font-size: 1.6rem;
+
+      .MuiIconButton-root {
+        padding: 7px;
+        &:hover {
+          background-color: rgba(142, 142, 184, 0.383);
+          transition: 0.5s background-color ease-in;
+        }
+      }
+    }
+  }
+
+  .sidebar-li {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    overflow-y: scroll;
+    bottom: 0;
+    height: 90%;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      border-radius: 20px;
+      background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(165, 164, 164, 0.374);
+    }
+
+    .sidebar-rel {
+      height: 100%;
+    }
+
+    li {
+      margin-bottom: 0.6em;
+      &:hover {
+        background-color: rgba(131, 131, 139, 0.171);
+        border-radius: 7px;
+        transition: 0.3s background-color;
+      }
+      &:hover a p,
+      &:hover .icons {
+        color: $dashFontHoverColor;
+        transition: 0.3s color;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.8em;
+        padding: 10px;
+
+        .icons {
+          font-size: 1.2rem;
+          color: $iconColor;
+        }
+
+        p {
+          color: $dashboardFontColor;
+          font-weight: bold;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .accordion {
+      box-shadow: none;
+      padding: 0;
+
+      #accordion-summary {
+        padding: 0 10px;
+
+        &:hover {
+          background-color: rgba(131, 131, 139, 0.171);
+          border-radius: 7px;
+          transition: 0.3s background-color;
+        }
+
+        .MuiAccordionSummary-content {
+          display: flex;
+          align-items: center;
+          gap: 0.8em;
+          padding: 0;
+
+          .icons {
+            font-size: 1.2rem;
+            color: $iconColor;
+          }
+
+          p {
+            color: $dashboardFontColor;
+            font-weight: bold;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .accordion-details {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.89rem;
+        line-height: 1;
+        padding-left: 2.5em;
+        font-size: 0.85rem;
+
+        & a:hover {
+          color: $dashFontHoverColor;
+        }
+      }
+    }
+  }
+}
+}
