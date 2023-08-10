@@ -1,2 +1,140 @@
+@import "../../Scss/colors.scss";
+
 .Dashboard-page {
+  padding: 1.5em;
+  background-color: $bodyColor;
+
+  .dashboard-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+
+      .head {
+        font-size: 1.87rem;
+        font-weight: bold;
+        color: $fontColor;
+      }
+
+      p {
+        font-size: 0.89rem;
+        color: $iconColor;
+      }
+    }
+
+    .options {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+
+      .days {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 0.89rem;
+        border: 1px solid rgba(56, 54, 54, 0.115);
+        font-size: 13px;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: rgb(49, 49, 91);
+          color: white;
+          transition: 0.3s all;
+        }
+      }
+
+      .reports {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0.76rem;
+        font-size: 13px;
+        border: 1px solid rgba(56, 54, 54, 0.115);
+        background-color: rgb(49, 49, 91);
+        color: white;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: rgb(70, 70, 142);
+          transition: 0.3s all;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .contents {
+    margin-top: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .stud-enrol {
+      width: 100%;
+      background-color: white;
+      border: $borderFade;
+      padding: 1.5em;
+
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h4 {
+          color: $fontColor;
+        }
+
+        p {
+          font-size: 12px;
+          color: $iconColor;
+        }
+
+        .tooltip {
+          font-size: 10px;
+          background-color: rgba(128, 128, 128, 0.645);
+          border-radius: 50%;
+          height: 15px;
+          width: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          position: relative;
+
+          &:hover {
+            &::before {
+              content: "Students Enrollment";
+              position: absolute;
+              right: 0;
+              margin-right: 2em;
+              width: 100px;
+              padding: 3px 5px;
+              color: white;
+              background-color: rgba(49, 49, 91, 0.704);
+            }
+          }
+        }
+      }
+
+      .values {
+        display: flex;
+        gap: 1em;
+
+        .monthly-vals {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+
+          div{
+             .amount{
+                font-size: 2em;
+             }
+          }
+        }
+      }
+    }
+  }
 }
