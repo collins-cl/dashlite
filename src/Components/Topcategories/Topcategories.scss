@@ -1,0 +1,54 @@
+@import "../../Scss/colors.scss";
+
+.topcategory {
+  width: 49%;
+  background-color: white;
+  margin-top: 2em;
+  padding: 1.2em;
+  border: $borderFade;
+  border-radius: 10px;
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      div {
+        font-size: 1.1em;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 13px;
+        color: $iconColor;
+      }
+    }
+  }
+
+  .categories {
+    margin-top: 1em;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+      padding: 7px 0;
+
+      .pro-gress {
+        width: 60%;
+      }
+
+      .prog-name {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
