@@ -12,9 +12,10 @@ import {
   MdSettings,
 } from "react-icons/md";
 import { ImUsers } from "react-icons/im";
-import { FaReceipt, FaUser, FaUserCog } from "react-icons/fa";
+import { FaUserCog } from "react-icons/fa";
 import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
+import { SiPowerapps, SiSourcegraph } from "react-icons/si";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 
 const Sidebar = () => {
@@ -25,9 +26,9 @@ const Sidebar = () => {
     <div className={open ? "sidebar-open" : "sidebar"}>
       <div className="sidebar-head">
         <div className="logo">
-          <img src={Logo} alt="" />
+          <SiSourcegraph className="img" />
           <p>
-            dash<span>lite</span>
+            .cole<span>dev</span>
           </p>
         </div>
 

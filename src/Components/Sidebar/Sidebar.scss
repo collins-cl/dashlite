@@ -24,8 +24,9 @@
       align-items: center;
       gap: 5px;
 
-      img {
-        width: 28px;
+      .img {
+        font-size: 26px;
+        color: rgba(62, 62, 218, 0.827);
       }
 
       p {
@@ -63,9 +64,7 @@
     height: 90%;
 
     &::-webkit-scrollbar {
-      width: 3px;
-      border-radius: 20px;
-      background-color: white;
+     display: none;
     }
 
     &::-webkit-scrollbar-thumb {

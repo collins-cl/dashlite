@@ -1,7 +1,7 @@
 @import "../../Scss/colors.scss";
 
 .Dashboard-page {
-  padding: 1.5em;
+  padding: 1.3em;
   background-color: $bodyColor;
 
   .dashboard-head {
@@ -70,6 +70,7 @@
   .contents {
     margin-top: 1.5em;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
 
@@ -77,6 +78,7 @@
       width: 100%;
       background-color: white;
       border: $borderFade;
+      border-radius: 10px;
       padding: 1.5em;
 
       .head {
@@ -121,17 +123,87 @@
 
       .values {
         display: flex;
-        gap: 1em;
+        gap: 3em;
+        margin-top: 1.5em;
 
-        .monthly-vals {
+        .monthly-vals,
+        .weekly-vals {
           display: flex;
           align-items: center;
           gap: 1em;
 
-          div{
-             .amount{
-                font-size: 2em;
-             }
+          div {
+            .amount {
+              font-size: 2em;
+              color: $fontColor;
+            }
+
+            p {
+              font-size: 12px;
+              color: $iconColor;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+          }
+        }
+
+        .monthly-vals {
+          p {
+            color: red;
+          }
+        }
+        .weekly-vals {
+          p {
+            color: rgb(14, 255, 14);
+          }
+        }
+      }
+
+      .stud-chart {
+        margin-top: 2em;
+        max-width: 100%;
+      }
+    }
+
+    .total-sales {
+      width: 49%;
+      background-color: white;
+      border: $borderFade;
+      margin-top: 2em;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      .head {
+        font-size: 1.3rem;
+        margin: 0.9em 0 0 1.5em;
+      }
+
+      .figures {
+        max-width: 85%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .amount {
+          font-size: 1.8rem;
+        }
+
+        .amount-action {
+          font-size: 15px;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: rgb(88, 244, 88);
+          }
+          p {
+            font-size: 13px;
           }
         }
       }
